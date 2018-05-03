@@ -39,12 +39,6 @@
 					<form:password path="password" />
 					
 					<fieldset>
-						<legend>성별</legend>
-						<label>여</label> <input type="radio" name="gender" value="female" checked="checked">
-						<label>남</label> <input type="radio" name="gender" value="male">
-					</fieldset>
-					
-					<fieldset>
 						<legend>약관동의</legend>
 						<input id="agree-prov" type="checkbox" name="agreeProv" value="y">
 						<label>서비스 약관에 동의합니다.</label>

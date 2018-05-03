@@ -14,11 +14,22 @@
 		<c:import url="/WEB-INF/views/include/header.jsp" />
 		<div id="content">
 			<div id="rent-result">
-				<p class="success">
-					정상적으로 대여(예약)이 되었습니다.
-					<br><br>
-					<a href="${pageContext.servletContext.contextPath }">목록으로 돌아가기</a>
-				</p>				
+				<c:choose>
+					<c:when test="${isRented eq true }">
+						<p class="success">
+							정상적으로 대여(예약)이 되었습니다.
+							<br><br>
+							<a href="${pageContext.servletContext.contextPath }">목록으로 돌아가기</a>
+						</p>
+					</c:when>
+					<c:when test="${isRented eq false }">
+						<p class="success">
+							이미 대출(예약)한 물품 입니다.
+							<br><br>
+							<a href="${pageContext.servletContext.contextPath }">목록으로 돌아가기</a>
+						</p>
+					</c:when>
+				</c:choose>				
 			</div>
 		</div>
 		<c:import url="/WEB-INF/views/include/footer.jsp" />
